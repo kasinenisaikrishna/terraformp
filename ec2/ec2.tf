@@ -11,11 +11,16 @@ resource "aws_security_group" "allow_ssh_terraform"{
         ipv6_cidr_blocks = ["::/0"]
     }
 
+    #for ingress we will allow from_port and to_port and protocol as per our needs
     ingress {
         from_port        = 22
         to_port          = 22
         protocol         = "tcp"
         cidr_blocks      = ["0.0.0.0/0"] #allow from everyone
         ipv6_cidr_blocks = ["::/0"]
+    }
+
+    tags = {
+        Name = "allow_sshh"
     }
 }
