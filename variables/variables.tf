@@ -43,7 +43,7 @@ variable "protocol" {
     default = "tcp"
 }
 
-variable "cidr_blocks" {
+variable "ingress_cidr" {
     type = list(string)
     default = ["0.0.0.0/0"]
 }
