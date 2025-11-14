@@ -10,3 +10,7 @@ variable "instance_names" {
 # variable "domain_name" {
 #   default = "dawsconnect.org"
 # }
+
+variable "environment" {
+    default = "prod"  
+}
